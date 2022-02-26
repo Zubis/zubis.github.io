@@ -49,17 +49,18 @@ function getRandomNumber(min, max) {
 }
 
 function changeResultBackground(val) {
-    const result = app.querySelector('.result')
+    const result = app.querySelector('.card')
 
-    result.classList.remove('success')
-    result.classList.remove('failed')
+    result.classList.remove('bg-light')
+    result.classList.remove('bg-success')
+    result.classList.remove('bg-danger')
 
     console.log(val)
 
     switch (val) {
-        case false: result.classList.add('failed')
+        case false: result.classList.add('bg-danger')
             break
-        case true: result.classList.add('success')
+        case true: result.classList.add('bg-success')
             break    
     }
 
